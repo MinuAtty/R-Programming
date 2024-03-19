@@ -72,3 +72,39 @@ ggplot(data.frame(Loading = loadings), aes(x = Loading, fill = 1)) +
   geom_density() +  
   theme(legend.position = 'none')
 
+# Predict the first principal component scores as the market index
+market.index <- predict(pca)[, 1]  
+
+# Display the market index values
+market.index  
+
+# Read the DJI (Dow Jones Industrial Average) data from a CSV file into a data frame
+dji.prices <- read.csv(file.path("C:\\Users\\Minusha Attygala\\OneDrive\\Documents\\R\\2nd Semester\\Building a Market Index\\DJI.csv"), stringsAsFactors = FALSE)  
+
+# Convert the 'Date' column in the DJI data frame to a date format using the ymd() function
+dji.prices <- transform(dji.prices, Date = ymd(Date))  
+
+# Filter out rows where the Date is before '2002-02-01' in the DJI data
+dji.prices <- subset(dji.prices, Date > ymd('2001-12-31')) 
+dji.prices <- subset(dji.prices, Date != ymd('2002-02-01')) 
+
+dji <- with(dji.prices, rev(Close))  # Reverse the 'Close' prices of DJI
+dates <- with(dji.prices, rev(Date))  # Reverse the dates of DJI
+
+# Create a data frame for comparison with columns: Date, MarketIndex, and DJI
+comparison <- data.frame(Date = dates,  
+                         MarketIndex = market.index, 
+                         DJI = dji)  
+
+# Plot a scatter plot comparing MarketIndex and DJI, with a linear regression line
+ggplot(comparison, aes(x = MarketIndex, y = DJI))+  
+  geom_point()+ 
+  geom_smooth(method ='lm', se = FALSE) 
+
+# Invert the MarketIndex values
+comparison <- transform(comparison, MarketIndex = -1 * MarketIndex)  
+
+# Plot a scatter plot comparing inverted MarketIndex and DJI, with a linear regression line
+ggplot(comparison, aes(x = MarketIndex, y = DJI))+ 
+  geom_point()+  
+  geom_smooth(method = 'lm', se = FALSE) 
