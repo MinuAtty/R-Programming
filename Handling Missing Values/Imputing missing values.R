@@ -13,7 +13,10 @@ data <- c(100, 200, 300, 300, NA)
 data[is.na(data)] <- as.numeric(names(which.max(table(data))))
 data
 
-
+# Mode imputation for categorical variables
+data <- c("anna", "bob", "tom", "tom", "ron", NA)
+data[is.na(data)] <- names(which.max(table(data)))
+data
 
 # Creating a dataframe 'df'
 df <- data.frame(
