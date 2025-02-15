@@ -7,7 +7,7 @@ library(ggplot2) # Load ggplot2 for plotting
 library(forecast) # Load forecast for time series analysis
 
 # Read the dataset from the specified file path
-data <- read.csv("C://Users//Minusha Attygala//Downloads//Big Data Analytics//Coconut_Price_SriLanka_2005_2025.csv")
+data <- read.csv("C://Users//Minusha Attygala//Downloads//Week 1//Coconut_Price_SriLanka_2005_2025.csv")
 
 # Display the structure of the dataset to understand its contents
 str(data)
