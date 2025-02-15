@@ -1,7 +1,7 @@
 library(ggplot2)  # Load the ggplot2 library for data visualization
 
 # Read the dataset from the specified file path
-data <- read.csv("C://Users//Minusha Attygala//OneDrive//Documents//Big Data Practicals//origin.csv")
+data <- read.csv("C://Users//Minusha Attygala//Downloads//Week 2//origin.csv")
 head(data)  # Display the first few rows of the dataset
 str(data)   # Show the structure of the dataset
 
