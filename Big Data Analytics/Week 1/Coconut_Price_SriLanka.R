@@ -1,3 +1,5 @@
+# Time Series Analysis
+
 # Install necessary packages for data visualization and time series forecasting
 install.packages("ggplot2") # For creating graphs and visualizations
 install.packages("forecast") # For time series forecasting models
