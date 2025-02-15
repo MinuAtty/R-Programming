@@ -1,7 +1,7 @@
 library(ggplot2)  # For data visualization
 
 # Read the dataset 
-data <- read.csv("C://Users//Minusha Attygala//OneDrive//Documents//Big Data Practicals//Climate.csv")
+data <- read.csv("C://Users//Minusha Attygala//Downloads//Week 2//Climate.csv")
 
 # Display the first few rows of the dataset
 head(data)
