@@ -12,14 +12,11 @@ head(data)
 # Display the structure of the dataset, including variable types
 str(data)
 
-# Retain only numerical data (Annual_Income, Age, Spending_Score, Total_Purchases)
-model_data <- data[,c("Annual_Income", "Age", "Spending_Score", "Total_Purchases")]
-
 # Apply the K-Means clustering algorithm
 set.seed(150)  # Set a random seed to ensure reproducibility of results
 
 # Apply K-Means clustering with 3 clusters
-results <- kmeans(model_data, centers = 4)
+results <- kmeans(pca_transformed_data, centers = 4)
 
 # Add the cluster labels to the original dataset
 data$Cluster <- as.factor(results$cluster)
