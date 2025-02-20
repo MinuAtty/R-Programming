@@ -12,7 +12,7 @@ str(data)
 # Plot Annual Income against Spending Score to visualize data distribution
 ggplot(data, aes(x= AnnualIncome, y= SpendingScore, color="red"))+  
   geom_point(size=3, alpha=0.7)+  # Add points with size and transparency
-  labs(title = "Annual Income against SpendingScore Distribution",  # Add title and axis labels
+  labs(title = "Annual Income against Spending Score Distribution",  # Add title and axis labels
        x = "Annual Income", 
        y = "SpendingScore")+
   theme_minimal()  # Use a minimal theme for better aesthetics
@@ -36,7 +36,7 @@ data$Cluster <- as.factor(results$cluster)
 ggplot(data, aes(x= AnnualIncome, y= SpendingScore, colour = Cluster))+  
   stat_ellipse(aes(fill = Cluster), geom = "polygon", alpha=0.4)+  # Draw cluster boundaries
   geom_point(size=3, alpha=0.7)+  # Plot data points
-  labs(title = "Annual Income against SpendingScore Distribution of Clusters",  # Add title and axis labels
+  labs(title = "Annual Income against Spending Score Distribution of Clusters",  # Add title and axis labels
        x = "Annual Income", 
        y = "SpendingScore")+
   theme_minimal()  # Use a minimal theme for better aesthetics
