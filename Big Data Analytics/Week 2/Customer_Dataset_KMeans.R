@@ -14,7 +14,7 @@ ggplot(data, aes(x= AnnualIncome, y= SpendingScore, color="red"))+
   geom_point(size=3, alpha=0.7)+  # Add points with size and transparency
   labs(title = "Annual Income against Spending Score Distribution",  # Add title and axis labels
        x = "Annual Income", 
-       y = "SpendingScore")+
+       y = "Spending Score")+
   theme_minimal()  # Use a minimal theme for better aesthetics
 
 # Implementation of K-Means clustering
@@ -38,7 +38,7 @@ ggplot(data, aes(x= AnnualIncome, y= SpendingScore, colour = Cluster))+
   geom_point(size=3, alpha=0.7)+  # Plot data points
   labs(title = "Annual Income against Spending Score Distribution of Clusters",  # Add title and axis labels
        x = "Annual Income", 
-       y = "SpendingScore")+
+       y = "Spending Score")+
   theme_minimal()  # Use a minimal theme for better aesthetics
 
 # Finding the optimal number of clusters using the Elbow Method
