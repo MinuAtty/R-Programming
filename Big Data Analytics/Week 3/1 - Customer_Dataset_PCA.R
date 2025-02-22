@@ -12,10 +12,15 @@ library(factoextra)  # For PCA visualization
 data <- read.csv("C://Users//Minusha Attygala//Downloads//Week 3//customer_data_pca.csv")  
 head(data) # Display the first few rows of the dataset
 
-# Step 1
+# Step 1 - Standardizing the data
 # Standardize the data to ensure all variables have equal importance
 scaled_data <- scale(data)  
 head(scaled_data)  # Display first few rows of standardized data
+
+# Step 2 - Computing the Covariance Matrix
+# Find feature pairs with high correlation
+cor_matrix <- cor(data)
+print(cor_matrix)
 
 # Perform Principal Component Analysis (PCA)
 pca_model <- prcomp(scaled_data, center = TRUE, scale = TRUE)  
