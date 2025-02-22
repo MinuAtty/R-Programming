@@ -19,7 +19,7 @@ head(scaled_data)  # Display first few rows of standardized data
 
 # Step 2 - Computing the Covariance Matrix
 # Find feature pairs with high correlation
-cor_matrix <- cor(data)
+cor_matrix <- cor(scaled_data)
 print(cor_matrix)
 
 # Perform Principal Component Analysis (PCA)
