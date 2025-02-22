@@ -22,8 +22,10 @@ head(scaled_data)  # Display first few rows of standardized data
 cor_matrix <- cor(scaled_data)
 print(cor_matrix)
 
+# Step 3 - Computing Eigenvalues & Eigenvectors
 # Perform Principal Component Analysis (PCA)
 pca_model <- prcomp(scaled_data, center = TRUE, scale = TRUE)  
+pca_model$sdev^2  # Eigenvalues 
 pca_model  # Display PCA model summary
 
 # Display the proportion of variance explained by each principal component
