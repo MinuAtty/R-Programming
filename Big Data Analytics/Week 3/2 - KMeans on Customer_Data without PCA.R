@@ -15,7 +15,7 @@ str(data)
 # Apply the K-Means clustering algorithm
 set.seed(150)  # Set a random seed to ensure reproducibility of results
 
-# Apply K-Means clustering with 3 clusters
+# Apply K-Means clustering with 4 clusters
 results <- kmeans(pca_transformed_data, centers = 4)
 
 # Add the cluster labels to the original dataset
