@@ -10,8 +10,9 @@ library(factoextra)  # For PCA visualization
 
 # Read the dataset from the specified file path
 data <- read.csv("C://Users//Minusha Attygala//Downloads//Week 3//customer_data_pca.csv")  
-data  # Display the dataset
+head(data) # Display the first few rows of the dataset
 
+# Step 1
 # Standardize the data to ensure all variables have equal importance
 scaled_data <- scale(data)  
 head(scaled_data)  # Display first few rows of standardized data
