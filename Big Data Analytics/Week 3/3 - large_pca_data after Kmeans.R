@@ -5,7 +5,7 @@ library(factoextra)  # For PCA visualization
 library(cluster)  # For clustering-related functions
 
 # Read the dataset from the specified file path
-data <- read.csv("C://Users//Minusha Attygala//OneDrive//Documents//Big Data Practicals//large_pca_data.csv")
+data <- read.csv("C://Users//Minusha Attygala//Downloads//Week 3//large_pca_data.csv")
 
 # Ensure all data is numeric for PCA and K-Means
 data <- data %>% select_if(is.numeric)  
