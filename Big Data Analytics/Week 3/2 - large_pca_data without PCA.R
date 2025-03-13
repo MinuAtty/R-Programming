@@ -4,7 +4,7 @@ library(dplyr)  # For data manipulation
 library(factoextra)  # For cluster visualization
 
 # Read the dataset from the specified file path
-data <- read.csv("C://Users//Minusha Attygala//OneDrive//Documents//Big Data Practicals//large_pca_data.csv")
+data <- read.csv("C://Users//Minusha Attygala//Downloads//Week 3//large_pca_data.csv")
 
 # Display the first few rows of the dataset to understand its structure
 head(data)
